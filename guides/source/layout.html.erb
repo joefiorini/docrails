@@ -61,6 +61,15 @@
         <li><a href="contributing_to_ruby_on_rails.html">Contribute</a></li>
         <li><a href="credits.html">Credits</a></li>
       </ul>
+      <select id="guidesIndex">
+        <% docs_for_menu.each do |section| %>
+          <optgroup label="<%= section['name'] %>">
+            <% finished_documents(section['documents']).each do |document| %>
+              <option value="<%= document['url'] %>"><%= document['name'] %></option>
+            <% end %>
+          </optgroup>
+        <% end %>
+      </select>
     </div>
   </div>
   <hr class="hide" />
