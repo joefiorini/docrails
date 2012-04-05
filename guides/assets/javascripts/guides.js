@@ -5,3 +5,14 @@ function guideMenu(){
     document.getElementById('guides').style.display = "none";
   }
 }
+
+guidesIndex = {
+  bind: function(){
+    $(".guidesIndex").on("change", "select", guidesIndex.navigate);
+  },
+  navigate: function(e){
+    var $list = $(e.target);
+    url = $list.val();
+    window.location = url;
+  }
+}

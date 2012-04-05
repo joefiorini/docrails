@@ -175,23 +175,6 @@ a, a:link, a:visited {
   font-size: 1.2857em;
 }
 
-@media screen and (max-width: 480px) {
-  #header .nav {
-    float: none;
-    width: 100%;
-  }
-
-  .nav li {
-    display: inline-block;
-    width: 33%;
-  }
-
-  .nav li.index {
-    width: 0;
-    display: none;
-  }
-}
-
 #header .nav li {margin: 0 0 0 0.5em;}
 #header .nav a {color: #FFF; text-decoration: none;}
 #header .nav a:hover {text-decoration: underline;}
@@ -214,13 +197,40 @@ a, a:link, a:visited {
 }
 #header .nav .index:hover a, #header .nav .index a:hover {background-position: right -81px;}
 
-#guidesIndex {
+@media screen and (max-width: 480px) {
+  #header .nav {
+    float: none;
+    width: 100%;
+    margin-left: -15px;
+    text-align: center;
+  }
+
+  #header .nav li {
+    display: inline-block;
+    margin: 0;
+    width: 32%;
+    text-align: center;
+  }
+
+  #header .nav li.index {
+    display: none;
+  }
+
+  #header .nav li a {
+    display: inline-block;
+    padding: 15px;
+  }
+}
+
+.guidesIndex {
   display: none;
 }
 
 @media screen and (max-width: 480px) {
-  #guidesIndex {
+  .guidesIndex {
     display: block;
+    text-align: center;
+    padding-right: 1em;
   }
 }
 
