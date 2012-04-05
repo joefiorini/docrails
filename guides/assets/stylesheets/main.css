@@ -248,6 +248,9 @@ a, a:link, a:visited {
     text-align: center;
     padding-right: 1em;
   }
+  .guidesIndex select {
+    font-size: .95em;
+  }
 }
 
 #guides {
